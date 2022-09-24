@@ -17,13 +17,13 @@ fun View.hikRotate(degree: Int) {
     val start = this.rotation
     val end = if (start == 0f && finalEnd == 270f) {
         -90f
-    }  else if (start == 270f) {
+    } else if (start == 270f) {
         when (finalEnd) {
             0f -> 360f
             90f -> 450f
             else -> finalEnd
         }
-    }else if (start == 180f && finalEnd == 0f) {
+    } else if (start == 180f && finalEnd == 0f) {
         360f
     } else {
         finalEnd
@@ -36,7 +36,7 @@ fun View.hikRotate(degree: Int) {
             this@hikRotate.rotation = value
         }
         addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationEnd(animation: Animator?) {
+            override fun onAnimationEnd(animation: Animator) {
                 super.onAnimationEnd(animation)
                 this@hikRotate.rotation = finalEnd
             }

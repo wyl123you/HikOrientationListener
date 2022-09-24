@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.provider.Settings.System
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.namespace.R
 
 @SuppressLint("SourceLockedOrientationActivity")
 class MainActivity : AppCompatActivity() {
